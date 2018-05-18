@@ -9,8 +9,6 @@ import com.fazecast.jSerialComm.SerialPort;
 import com.fazecast.jSerialComm.SerialPortDataListener;
 import com.fazecast.jSerialComm.SerialPortEvent;
 import java.util.Arrays;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  *
@@ -28,7 +26,7 @@ public class SerialLineReceiver implements SerialPortDataListener {
     private SerialPortLineListener listener = null;
     
     public SerialLineReceiver() throws Exception {
-        this(2, 115200, false);
+        this(1, 115200, false);  
     }
     
     public SerialLineReceiver(int comIndex, int baudrate, boolean enableDebugging) throws Exception {
@@ -37,7 +35,7 @@ public class SerialLineReceiver implements SerialPortDataListener {
             throw new Exception("No COM ports available. Is your Arduino connected?");
         } else {
             if (comIndex >= SerialPort.getCommPorts().length) {
-                throw new Exception("Incorrect comIndex. No such port with that index.");
+                throw new Exception("Incorrect comIndex. No such port with that index." + SerialPort.getCommPorts().length + " " + comIndex);
             }
             comPort = SerialPort.getCommPorts()[comIndex];
             if (comPort.openPort()) {

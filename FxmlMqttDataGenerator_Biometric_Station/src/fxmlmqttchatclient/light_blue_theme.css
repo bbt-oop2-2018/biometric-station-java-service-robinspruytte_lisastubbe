@@ -1,0 +1,37 @@
+.root {
+    -fx-background-color : #B3E5FC;
+}
+#title {
+    -fx-text-fill   : #01579B;
+    -fx-font-weight : bolder;
+    -fx-font-size   : 34px;
+}
+
+.label {
+    -fx-fill : #0277BD;
+    -fx-font-weight : bolder;
+    -fx-font-size   : 22px;
+}
+
+.textarea {
+    -fx-background-color : #E1F5FE;
+    -fx-font-weight : bolder;
+    -fx-font-size   : 22px;
+}
+
+.button {
+    -fx-background-color : #29B6F6;
+    -fx-text-fill        : #E1F5FE;
+    -fx-font-weight      : 900;
+    
+    -fx-font-weight : bolder;
+    -fx-font-size   : 22px;
+}
+
+.button:hover {
+    -fx-background-color : #01579B;
+}
+
+#sendButton {
+    -fx-font-size   : 32px;
+}

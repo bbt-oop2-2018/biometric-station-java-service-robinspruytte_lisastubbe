@@ -23,15 +23,13 @@ import javafx.stage.Stage;
 public class FXMLDocumentController implements Initializable, IMqttMessageHandler {
     private SerialLineReceiver receiver; 
     private MqttChatService chatService;
-    private final int COM_PORT = 0; //ComePort value - 1
+    private final int COM_PORT = 0;
     
     @FXML
     private Button COMButton;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        //receiver.setComPortIndex(COMPort);
-        
         chatService = new MqttChatService();
         chatService.setMessageHandler(this);
         

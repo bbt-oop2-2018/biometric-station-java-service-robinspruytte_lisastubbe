@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="FxmlMqttStation_Data_Generator.jnlp">
+  <information>
+    <title>FxmlMqttStation_Data_Generator</title>
+    <vendor>nicod</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="FxmlMqttStation_Data_Generator.jar" size="6185" download="eager" />
+    <jar href="lib\JavaMqttStationService.jar" size="7574" download="eager" />
+    <jar href="lib\org.eclipse.paho.client.mqttv3-1.2.0.jar" size="202925" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="FxmlMqttStation_Data_Generator" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="fxmlmqttchatclient.FxmlMqttChatClient"  name="FxmlMqttStation_Data_Generator" />
+  <update check="always"/>
+</jnlp>
